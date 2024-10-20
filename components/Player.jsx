@@ -1,6 +1,6 @@
 'use client';
 import Playerpng from '../assets/player.png';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 
 // const useAudio = (url) => {
@@ -44,8 +44,10 @@ const Player = ({ url }) => {
   // const audio = new Audio(
   //   'https://audio.jukehost.co.uk/8dxgmrmz9SZJOXHQtcnET3khvlaKVw1H'
   // );
-  const [audio, setAudio] = useState(null);
-
+  // const [audio, setAudio] = useState(null);
+  const audio = useRef(
+    new Audio('https://audio.jukehost.co.uk/8dxgmrmz9SZJOXHQtcnET3khvlaKVw1H')
+  );
   const [playing, setPlaying] = useState(false);
   const toggle = () => setPlaying(!playing);
   const autoplay = () => {
@@ -53,18 +55,17 @@ const Player = ({ url }) => {
   };
 
   useEffect(() => {
-    setAudio(
-      new Audio('https://audio.jukehost.co.uk/8dxgmrmz9SZJOXHQtcnET3khvlaKVw1H')
-    );
-    playing ? audio.play() : audio.pause();
+    audio.current.volume = 1;
+    audio.current.loop = true;
+    playing ? audio.current.play() : audio.current.pause();
   }, [playing]);
 
   useEffect(() => {
     window.addEventListener('click', autoplay, { once: true });
-    audio.addEventListener('ended', () => setPlaying(true));
+    audio.current.addEventListener('ended', () => setPlaying(true));
     return () => {
-      audio.removeEventListener('ended', () => setPlaying(true));
-      audio.pause();
+      audio.current.removeEventListener('ended', () => setPlaying(true));
+      audio.current.pause();
     };
   }, []);
 
