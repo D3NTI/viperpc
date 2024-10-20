@@ -41,7 +41,7 @@ export default function SignUpForm() {
 
           <div className="circle"></div>
         </div>
-        <h4> You don't have an account ?</h4>
+        <h4> You don&apos;t have an account ?</h4>
         <Link href="/signup">
           <h3>Click Here!</h3>
         </Link>

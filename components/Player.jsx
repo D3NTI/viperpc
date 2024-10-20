@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 
 const useAudio = (url) => {
-  const [audio] = useState(
+  const [audio, setAudio] = useState(
     new Audio('https://audio.jukehost.co.uk/8dxgmrmz9SZJOXHQtcnET3khvlaKVw1H')
   );
   const [playing, setPlaying] = useState(false);
