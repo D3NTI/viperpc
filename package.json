@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "prisma": {
-    "schema": "./Prisma/schema.prisma"
+    "schema": "./prisma/schema.prisma"
   },
   "scripts": {
     "dev": "npx prisma generate && next dev",
