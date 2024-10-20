@@ -1,7 +1,7 @@
 'use client';
 import React, { use, useEffect, useState } from 'react';
 import { useSession } from 'next-auth/react';
-import Ava from '../assets/Ava.png';
+import Ava from '../assets/ava.png';
 import LeftIn from '../components/LeftIn';
 import RightIn from '../components/RightIn';
 import Image from 'next/image';

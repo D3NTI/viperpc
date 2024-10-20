@@ -3,10 +3,10 @@ import Image from 'next/image';
 import CPU from '../assets/cpu.png';
 import RAM from '../assets/ram.png';
 import Rtx from '../assets/Rtx.png';
-import Disk from '../assets/Disk.png';
-import Keyboard from '../assets/Keyboard.png';
+import Disk from '../assets/disk.png';
+import Keyboard from '../assets/keyboard.png';
 import Mouse from '../assets/mouse.png';
-import Head from '../assets/head.png';
+import Head from '../assets/Head.png';
 import Monitor from '../assets/Monitor.png';
 import Strelka from '../assets/Stralka.png';
 
