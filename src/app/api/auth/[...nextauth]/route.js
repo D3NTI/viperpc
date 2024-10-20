@@ -51,7 +51,7 @@ export const authOptions = {
       },
     }),
   },
-  secret: process.env.NEXTAUTH_SECRET,
+  secret: 'dfsjhakdjasdjaslasdasdsadsa',
   debug: process.env.NODE_ENV === 'development',
 };
 const handler = NextAuth(authOptions);
