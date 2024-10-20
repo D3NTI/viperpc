@@ -1,4 +1,4 @@
-import Player from '../../components/Player';
+'use client';
 import Nav from '../../components/Nav';
 import Main from '../../components/Main';
 import Gallery from '../../components/Gallery';
@@ -8,6 +8,9 @@ import Components from '../../components/Components';
 import Reservation from '../../components/Reservation';
 import Footer from '../../components/Footer';
 import Head from 'next/head';
+import dynamic from 'next/dynamic';
+
+const Player = dynamic(() => import('../../components/Player'), { ssr: false });
 
 export default function Home() {
   return (
