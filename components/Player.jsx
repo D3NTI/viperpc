@@ -45,9 +45,7 @@ const Player = ({ url }) => {
   //   'https://audio.jukehost.co.uk/8dxgmrmz9SZJOXHQtcnET3khvlaKVw1H'
   // );
   const [audio, setAudio] = useState(null);
-  setAudio(
-    new Audio('https://audio.jukehost.co.uk/8dxgmrmz9SZJOXHQtcnET3khvlaKVw1H')
-  );
+
   const [playing, setPlaying] = useState(false);
   const toggle = () => setPlaying(!playing);
   const autoplay = () => {
@@ -55,8 +53,9 @@ const Player = ({ url }) => {
   };
 
   useEffect(() => {
-    audio.volume = 1;
-    audio.loop = true;
+    setAudio(
+      new Audio('https://audio.jukehost.co.uk/8dxgmrmz9SZJOXHQtcnET3khvlaKVw1H')
+    );
     playing ? audio.play() : audio.pause();
   }, [playing]);
 
