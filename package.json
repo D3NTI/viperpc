@@ -7,7 +7,8 @@
   },
   "scripts": {
     "dev": "npx prisma generate && next dev",
-    "build": "npx prisma generate && next build",
+    "postinstall": "prisma generate",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
