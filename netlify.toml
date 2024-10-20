@@ -1,5 +1,5 @@
 [build]
-  command = "npx prisma generate && next build"
+  command = "npx prisma generate && next dev"
   publish = ".next"
 
 [[plugins]]
