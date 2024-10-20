@@ -40,14 +40,14 @@ export default function Nav() {
               stroke="#ff0000"
               transform="rotate(0)matrix(1, 0, 0, 1, 0, 0)"
             >
-              <g id="SVGRepo_bgCarrier" stroke-width="0" />
+              <g id="SVGRepo_bgCarrier" strokeWidth="0" />
 
               <g
                 id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
                 stroke="#CCCCCC"
-                stroke-width="0.624"
+                strokeWidth="0.624"
               />
 
               <g id="SVGRepo_iconCarrier">
@@ -55,20 +55,20 @@ export default function Nav() {
                 <path
                   d="M4 18L20 18"
                   stroke="#eb33ff"
-                  stroke-width="2.4"
-                  stroke-linecap="round"
+                  strokeWidth="2.4"
+                  strokeLinecap="round"
                 />{' '}
                 <path
                   d="M4 12L20 12"
                   stroke="#eb33ff"
-                  stroke-width="2.4"
-                  stroke-linecap="round"
+                  strokeWidth="2.4"
+                  strokeLinecap="round"
                 />{' '}
                 <path
                   d="M4 6L20 6"
                   stroke="#eb33ff"
-                  stroke-width="2.4"
-                  stroke-linecap="round"
+                  strokeWidth="2.4"
+                  strokeLinecap="round"
                 />{' '}
               </g>
             </svg>
