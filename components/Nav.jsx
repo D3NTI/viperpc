@@ -1,9 +1,11 @@
 'use client';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Logo from '../assets/logo.png';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useSession } from 'next-auth/react';
+import NavMobile from './NavMobile';
+import autoAnimate from '@formkit/auto-animate';
 
 export default function Nav() {
   const { data: session } = useSession(); // useSession()
@@ -13,9 +15,66 @@ export default function Nav() {
       setUserIn(true);
     }
   }, [session]);
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => setIsOpen(!isOpen);
+  const parent = useRef(null);
+
+  useEffect(() => {
+    parent.current && autoAnimate(parent.current);
+  }, [parent]);
+
   return (
-    <div className="nav">
-      <Image src={Logo} alt="" />
+    <div className="nav " ref={parent}>
+      <div className="dla">
+        <Image src={Logo} alt="" />
+        <div className="mb-btn">
+          <button onClick={toggleMenu}>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="64px"
+              height="64px"
+              viewBox="0 0 24.00 24.00"
+              fill="none"
+              stroke="#ff0000"
+              transform="rotate(0)matrix(1, 0, 0, 1, 0, 0)"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke="#CCCCCC"
+                stroke-width="0.624"
+              />
+
+              <g id="SVGRepo_iconCarrier">
+                {' '}
+                <path
+                  d="M4 18L20 18"
+                  stroke="#eb33ff"
+                  stroke-width="2.4"
+                  stroke-linecap="round"
+                />{' '}
+                <path
+                  d="M4 12L20 12"
+                  stroke="#eb33ff"
+                  stroke-width="2.4"
+                  stroke-linecap="round"
+                />{' '}
+                <path
+                  d="M4 6L20 6"
+                  stroke="#eb33ff"
+                  stroke-width="2.4"
+                  stroke-linecap="round"
+                />{' '}
+              </g>
+            </svg>
+          </button>
+        </div>
+      </div>
       <ul className="nav-butt">
         <li>
           <Link href="#gallery">Gallery</Link>
@@ -40,51 +99,8 @@ export default function Nav() {
         )}
         )
       </div>
-      <div className="mb-btn">
-        <button>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="64px"
-            height="64px"
-            viewBox="0 0 24.00 24.00"
-            fill="none"
-            stroke="#ff0000"
-            transform="rotate(0)matrix(1, 0, 0, 1, 0, 0)"
-          >
-            <g id="SVGRepo_bgCarrier" stroke-width="0" />
 
-            <g
-              id="SVGRepo_tracerCarrier"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke="#CCCCCC"
-              stroke-width="0.624"
-            />
-
-            <g id="SVGRepo_iconCarrier">
-              {' '}
-              <path
-                d="M4 18L20 18"
-                stroke="#eb33ff"
-                stroke-width="2.4"
-                stroke-linecap="round"
-              />{' '}
-              <path
-                d="M4 12L20 12"
-                stroke="#eb33ff"
-                stroke-width="2.4"
-                stroke-linecap="round"
-              />{' '}
-              <path
-                d="M4 6L20 6"
-                stroke="#eb33ff"
-                stroke-width="2.4"
-                stroke-linecap="round"
-              />{' '}
-            </g>
-          </svg>
-        </button>
-      </div>
+      {isOpen ? <NavMobile /> : ''}
     </div>
   );
 }

@@ -96,7 +96,7 @@ export default function Form() {
         </span>
       </h3>
 
-      <input type="submit" value="Reserve" />
+      <input className="bdn" type="submit" value="Reserve" />
     </form>
   );
 }

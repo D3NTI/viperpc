@@ -5,11 +5,11 @@ import Link from 'next/link';
 
 export default function NavReg() {
   return (
-    <div className="nav">
+    <div className="navi">
       <Link href="/">
-        <Image src={Logo} alt="" />
+        <Image className="logo" src={Logo} alt="" />
       </Link>
-      <div className="nav-btns">
+      <div className="naav-btns">
         <Link href="/login">Sign in</Link>
         <Link href="/signup">Sign up</Link>{' '}
       </div>

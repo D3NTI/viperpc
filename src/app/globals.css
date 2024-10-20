@@ -21,8 +21,8 @@ body {
   padding: 0px 2.3%;
 }
 
-.nav img {
-  width: 20%;
+.dla img {
+  width: 100%;
 }
 
 .nav-butt {
@@ -92,6 +92,7 @@ body {
   background: linear-gradient(166.96deg, #000000 16.56%, #601d80 79.64%);
   padding-left: 1.77%;
   padding-right: 1.77%;
+  padding-top: 0px;
 }
 
 .main::after {
@@ -659,8 +660,8 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-right: 9%;
-  width: 84%;
+  padding-right: 7%;
+  width: 86;
   padding-bottom: 15px;
   padding-top: 15px;
 }
@@ -1147,7 +1148,6 @@ Part 2 */
   }
   .bkg {
     padding-bottom: 100px;
-    display: flex;
     flex-direction: column;
     align-items: center;
   }
@@ -1242,5 +1242,362 @@ Part 2 */
     position: relative;
     background-color: #9887ef;
     margin-top: 50px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .prices-sections {
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 90%;
+    padding-top: 60px;
+    background: linear-gradient(178deg, #000000 16.56%, #601d80 79.64%);
+  }
+  .prices-sections p {
+    font-family: 'Khand', sans-serif;
+    font-style: normal;
+    color: #fff;
+    font-size: 54px;
+    text-shadow: #2d2a2acf 0px 13px;
+  }
+  .xxx {
+    margin-left: 70px;
+  }
+  .bar {
+    width: 100%;
+    margin-top: 40px;
+    display: inline-flex;
+    background: linear-gradient(90deg, #000000 25.13%, #666666 100%);
+  }
+  .bar button {
+    background-color: #00000000;
+    font-family: 'Khand', sans-serif;
+    font-style: normal;
+    color: white;
+    font-size: 18px;
+    padding: 5px 10px;
+    border: none;
+    border-right: 5px solid #6c6c6c;
+  }
+  .bar button:hover {
+    cursor: pointer;
+    background-color: #ffffff27;
+    transition: 0.5s;
+  }
+  .gg {
+    display: flex;
+    justify-content: space-between;
+  }
+  .gg svg {
+    width: 35%;
+  }
+  .cards {
+    margin-top: 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .cards p {
+    color: #fff;
+    font-size: 16px;
+  }
+  .first-card {
+    padding: 5%;
+    font-size: 40px;
+    clip-path: inset(0 0 0 0);
+  }
+  .second-card {
+    padding: 5%;
+    font-size: 40px;
+    clip-path: inset(0 0 0 0);
+    margin-top: 50px;
+  }
+  .reservation-card h1 {
+    color: #fff;
+    font-size: 36px;
+    width: 100%;
+  }
+  .reservation-card {
+    background-color: #511070;
+    border-radius: 97px;
+    padding: 40px 25px;
+    width: 80%;
+    display: flex;
+    align-items: center;
+  }
+  .reservation-card img {
+    margin-top: 50px;
+    width: 100%;
+  }
+  .right-form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .reservation-form {
+    width: 90%;
+    background-color: #d9d9d9;
+    border-radius: 40px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 0%;
+  }
+  .left-form {
+    width: 100%;
+  }
+  .reservation-section {
+    background: linear-gradient(178deg, #8b24bb.56%, #601d80 79.64%);
+    padding-top: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 60px;
+  }
+  .reservation-form select {
+    width: 100%;
+    font-size: 13px;
+  }
+  .reservation-form img {
+    width: 100%;
+  }
+  .right-form {
+    width: 100%;
+  }
+  .reservation-form h3 {
+    font-size: 14px;
+  }
+  footer svg {
+    max-width: 56px;
+    max-height: 56px;
+  }
+  .components-btns button {
+    font-size: 20px;
+  }
+  .row p {
+    font-size: 20px;
+  }
+  .row img {
+    max-width: 46px;
+    max-height: 46px;
+  }
+  .pp img {
+    max-width: 36px;
+    max-height: 36px;
+  }
+  .first-comp {
+    width: 80%;
+  }
+  .second-comp {
+    width: 80%;
+  }
+  #components {
+    font-size: 60px;
+    padding-top: 100px;
+  }
+  .preview img {
+    width: 100%;
+  }
+  .Part {
+    width: 80%;
+    height: 10%;
+  }
+  .prices-sections {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .cards {
+    width: 100%;
+  }
+  .first-card {
+    width: 90%;
+  }
+  .second-card {
+    width: 90%;
+  }
+  .second-card p {
+    font-size: 25px;
+  }
+  .first-card p {
+    font-size: 25px;
+  }
+  .card_shadow {
+    width: 100%;
+  }
+  .card_shadow_sec {
+    width: 100%;
+  }
+  .left-form img {
+    display: none;
+  }
+  #reserv {
+    font-size: 30px;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+  .reservation-form input[type='submit'] {
+    margin-left: 10%;
+    margin-top: 10px;
+    color: #fff;
+    text-align: center;
+    width: 80%;
+    text-decoration: none;
+    padding: 30px;
+    font-size: 20px;
+    margin-top: 50px;
+  }
+  .left-section a {
+    width: 60%;
+    padding: 30px 10px;
+  }
+  .Dog {
+    display: none;
+  }
+  .Alabaster {
+    display: none;
+  }
+  .Vip {
+    display: none;
+  }
+  .Cat {
+    display: none;
+  }
+  .Ice {
+    width: 90%;
+  }
+  .right-section img {
+    width: 100%;
+    max-height: 376px;
+  }
+  .left-section h2 {
+    font-size: 30px;
+  }
+  .left-section h1 {
+    font-size: 40px;
+  }
+  .main {
+    width: 90%;
+  }
+  .main li {
+    font-size: 30px;
+    margin-top: 20px;
+  }
+  .nav {
+    display: flex;
+    flex-direction: column;
+  }
+  .dla {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+  }
+  .dla img {
+    width: 80%;
+    height: 80%;
+  }
+  .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 0px;
+  }
+  .link {
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 25px;
+    color: #fff;
+    background-color: #151515;
+    padding: 20px 10px;
+    border-bottom: 5px solid #706f6f;
+  }
+  .pp {
+    display: flex;
+    flex-direction: column;
+  }
+  .inacc-container {
+    width: 100%;
+    padding: 0px;
+    padding-top: 30px;
+  }
+  .inacc {
+    width: 70%;
+  }
+  .top img {
+    width: 20%;
+    height: auto;
+  }
+  .inf-cont {
+    width: 100%;
+  }
+  .top h1 {
+    font-size: 40px;
+    margin-left: 10px;
+  }
+  .data h2 {
+    font-size: 30px;
+    width: 100%;
+    padding-right: 200px;
+  }
+  .right-inacc {
+    width: 100%;
+    margin-top: 30px;
+  }
+  .rig-con {
+    width: 100%;
+  }
+  .top {
+    justify-content: space-between;
+  }
+  .navi {
+    display: flex;
+    background-color: #000;
+    width: 100%;
+  }
+  .logo {
+    width: 100%;
+    height: auto;
+  }
+  .naav-btns {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .naav-btns a {
+    color: #fff;
+    text-align: center;
+    width: 30%;
+    text-decoration: none;
+    padding: 16px;
+    font-size: 19px;
+    font-weight: bold;
+    position: relative;
+    background-color: #7c67e6;
+    clip-path: polygon(
+      10% 0%,
+      80% 0%,
+      100% 0,
+      100% 75%,
+      90% 100%,
+      0 100%,
+      0% 80%,
+      0% 25%
+    );
+  }
+  .naav-btns a:hover {
+    background-color: #5c4ab4;
+    transition-duration: 0.5s;
+  }
+  .sign-form {
+    width: 70%;
+  }
+  .social {
+    width: 80%;
   }
 }
