@@ -13,6 +13,12 @@ export async function POST(request) {
     return new NextResponse('Missing Fields', { status: 400 });
   }
 
+  console.log(
+    await prisma.user.client.findUnique({
+      where: { email: 'bobzorin@gmail.com' },
+    })
+  );
+
   const exist = await prisma.user.findUnique({
     where: {
       email: email,
