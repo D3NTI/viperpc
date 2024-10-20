@@ -14,7 +14,7 @@ export async function POST(request) {
   }
 
   console.log(
-    await prisma.user.client.findUnique({
+    await prisma.user.findUnique({
       where: { email: 'bobzorin@gmail.com' },
     })
   );
