@@ -18,6 +18,7 @@ export default function SignUpForm() {
       ...data,
       redirect: false,
     });
+    router.refresh();
     router.push('/account');
   };
 
