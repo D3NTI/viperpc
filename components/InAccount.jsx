@@ -6,7 +6,12 @@ import LeftIn from '../components/LeftIn';
 import RightIn from '../components/RightIn';
 import Image from 'next/image';
 export default function InAccount() {
-  const { data: session } = useSession(); // useSession()
+  const { data: session } = useSession({
+    required: true,
+    onUnauthenticated() {
+      redirect('/');
+    },
+  });
   const [userData, setUserData] = useState({
     name: 'Loading...',
     email: 'Loading...',
