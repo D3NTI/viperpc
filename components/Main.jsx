@@ -13,7 +13,7 @@ export default function Main() {
           <li>Only the best computers </li>
           <li> Lounge zone with cafe and bar</li>
         </ul>
-        <Link className="main-btn" href="">
+        <Link className="main-btn" href="#reserv">
           RESERVATION
         </Link>
       </div>

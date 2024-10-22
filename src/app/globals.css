@@ -571,7 +571,7 @@ body {
   padding: 40px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   margin-left: 5%;
 }
 
@@ -609,11 +609,10 @@ body {
     0% 80%,
     0% 25%
   );
-  margin-left: 30%;
   margin-top: 30px;
   color: #fff;
   text-align: center;
-  width: 30%;
+  width: 50%;
   text-decoration: none;
   padding: 30px;
   font-size: 24px;
@@ -624,6 +623,13 @@ body {
 }
 
 .reservation-form a:hover {
+  cursor: pointer;
+  background-color: #5c4ab4;
+  transition-duration: 0.5s;
+}
+
+.reservation-form input[type='submit']:hover {
+  cursor: pointer;
   background-color: #5c4ab4;
   transition-duration: 0.5s;
 }
@@ -648,6 +654,165 @@ h3 select {
   outline: none;
   padding: 10px;
   background-color: rgba(255, 255, 255, 0.485);
+}
+
+.form-container {
+  position: relative;
+  width: 100%;
+}
+
+.right-form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.reservation-form {
+  width: 90%;
+  background-color: #d9d9d9;
+  border-radius: 40px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 0%;
+  transition: filter 0.3s ease;
+}
+
+.form-blur {
+  filter: blur(4px);
+  pointer-events: none;
+  user-select: none;
+  opacity: 0.7;
+}
+
+.left-form {
+  width: 60%;
+  padding-right: 30px;
+}
+
+.reservation-section {
+  background: linear-gradient(178deg, #8b24bb 0.56%, #601d80 79.64%);
+  padding-top: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 60px;
+}
+
+.reservation-form select {
+  width: 100%;
+  font-size: 18px;
+  padding: 8px;
+  border-bottom: 3px solid #000000;
+}
+
+.reservation-form img {
+  width: 100%;
+}
+
+.reservation-form h3 {
+  font-size: 20px;
+  width: 100%;
+}
+
+.reservation-form input {
+  width: 100%;
+  padding: 8px;
+  margin: 8px 0;
+  border-bottom: 3px solid #000000;
+  font-size: 24px;
+}
+
+.reservation-form input:disabled,
+.reservation-form select:disabled {
+  background: #f5f5f5;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.auth-message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 1rem 2rem;
+  font-weight: bold;
+  z-index: 10;
+  text-align: center;
+}
+
+.notification {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #4caf50;
+  color: white;
+  padding: 1rem 2rem;
+  animation: slideUp 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes slideUp {
+  from {
+    transform: translate(-50%, 100%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, 0);
+    opacity: 1;
+  }
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  width: 90%;
+  background-color: #d9d9d9;
+  border-radius: 40px;
+}
+
+.loading-spinner {
+  color: #8b24bb;
+  font-size: 14px;
+  animation: spin 1s infinite linear;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translate(-50%, 100%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .reservation-form {
+    width: 95%;
+    padding: 20px;
+  }
+  .auth-message,
+  .notification {
+    width: 60%;
+    font-size: 12px;
+  }
 }
 
 select:focus {
@@ -893,6 +1058,49 @@ h4 {
 
 .mb-btn {
   display: none;
+}
+
+.navi {
+  display: flex;
+  background-color: #000;
+  width: 92%;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 4%;
+  padding-right: 4%;
+}
+
+.naav-btns a {
+  color: #fff;
+  text-align: center;
+  width: 30%;
+  text-decoration: none;
+  padding: 16px;
+  font-size: 26px;
+  font-weight: bold;
+  position: relative;
+  background-color: #7c67e6;
+  clip-path: polygon(
+    10% 0%,
+    80% 0%,
+    100% 0,
+    100% 75%,
+    90% 100%,
+    0 100%,
+    0% 80%,
+    0% 25%
+  );
+}
+
+.naav-btns a:hover {
+  background-color: #5c4ab4;
+  transition-duration: 0.5s;
+}
+
+.naav-btns {
+  width: 25%;
+  display: flex;
+  justify-content: space-between;
 }
 
 @media screen and (max-width: 1000px) {
@@ -1182,7 +1390,6 @@ Part 2 */
     width: 100%;
     background-color: #d9d9d9;
     border-radius: 40px;
-    padding: 40px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -1330,45 +1537,7 @@ Part 2 */
     margin-top: 50px;
     width: 100%;
   }
-  .right-form {
-    width: 100%;
-    display: flex;
-    align-items: center;
-  }
-  .reservation-form {
-    width: 90%;
-    background-color: #d9d9d9;
-    border-radius: 40px;
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-left: 0%;
-  }
-  .left-form {
-    width: 100%;
-  }
-  .reservation-section {
-    background: linear-gradient(178deg, #8b24bb.56%, #601d80 79.64%);
-    padding-top: 5%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-bottom: 60px;
-  }
-  .reservation-form select {
-    width: 100%;
-    font-size: 13px;
-  }
-  .reservation-form img {
-    width: 100%;
-  }
-  .right-form {
-    width: 100%;
-  }
-  .reservation-form h3 {
-    font-size: 14px;
-  }
+  /* Медиа-запросы для адаптивности */
   footer svg {
     max-width: 56px;
     max-height: 56px;
@@ -1438,6 +1607,9 @@ Part 2 */
     width: 100%;
     text-align: center;
     padding-bottom: 20px;
+  }
+  .reservation-form {
+    width: 85%;
   }
   .reservation-form input[type='submit'] {
     margin-left: 10%;
@@ -1557,24 +1729,30 @@ Part 2 */
   .navi {
     display: flex;
     background-color: #000;
+    width: 92%;
+    padding-bottom: 10px;
+  }
+  .navi img {
     width: 100%;
+    max-height: 100px;
   }
   .logo {
     width: 100%;
     height: auto;
   }
   .naav-btns {
-    width: 60%;
+    width: 50%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
   .naav-btns a {
     color: #fff;
+    margin-left: 4%;
     text-align: center;
     width: 30%;
     text-decoration: none;
-    padding: 16px;
+    padding: 10px 5px;
     font-size: 19px;
     font-weight: bold;
     position: relative;
@@ -1590,7 +1768,13 @@ Part 2 */
       0% 25%
     );
   }
+  .bdn:hover {
+    cursor: pointer;
+    background-color: #5c4ab4;
+    transition-duration: 0.5s;
+  }
   .naav-btns a:hover {
+    cursor: pointer;
     background-color: #5c4ab4;
     transition-duration: 0.5s;
   }
