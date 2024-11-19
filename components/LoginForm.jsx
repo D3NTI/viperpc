@@ -32,6 +32,16 @@ export default function SignUpForm() {
       console.error('Login error:', error);
       setError('An unexpected error occurred');
     }
+    if (error instanceof AuthError) {
+      switch (error.type) {
+        case 'CredentialsSignin':
+          return { msg: 'Invalid credentials', status: 'error' };
+        case 'CredentialsSignin':
+          throw error;
+        default:
+          return { msg: 'Something went wrong', status: 'error' };
+      }
+    }
   };
 
   return (
