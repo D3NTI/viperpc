@@ -5,7 +5,6 @@ import React, { useState } from 'react';
 import Logo from '../assets/logo.png';
 import { useRouter } from 'next/navigation';
 import { useSession } from 'next-auth/react';
-import emailjs from '@emailjs/browser';
 
 export default function Form() {
   const router = useRouter();
@@ -72,7 +71,6 @@ export default function Form() {
       </div>
     );
   }
-  // Emeil send
 
   return (
     <div className="form-container">

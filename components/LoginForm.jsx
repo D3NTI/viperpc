@@ -16,9 +16,10 @@ export default function SignUpForm() {
     e.preventDefault();
     signIn('credentials', {
       ...data,
+      callbackUrl: '/',
     });
 
-    router.push('/account');
+    router.push('/');
   };
 
   return (
