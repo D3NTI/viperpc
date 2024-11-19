@@ -16,7 +16,6 @@ export default function SignUpForm() {
     e.preventDefault();
     signIn('credentials', {
       ...data,
-      callbackUrl: '/account',
     });
 
     router.push('/account');

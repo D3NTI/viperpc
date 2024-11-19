@@ -1,9 +1,11 @@
 'use client';
+
 import Image from 'next/image';
 import React, { useState } from 'react';
 import Logo from '../assets/logo.png';
 import { useRouter } from 'next/navigation';
 import { useSession } from 'next-auth/react';
+import emailjs from '@emailjs/browser';
 
 export default function Form() {
   const router = useRouter();
@@ -19,6 +21,7 @@ export default function Form() {
 
   async function onSubmit(event) {
     event.preventDefault();
+    z;
     if (status !== 'authenticated') return;
 
     try {
@@ -29,7 +32,7 @@ export default function Form() {
         },
         body: JSON.stringify({
           data,
-          userId: session.user.id, // Добавляем ID пользователя к данным
+          userId: session.user.id,
         }),
       });
       const reserveInfo = await response.json();
@@ -69,6 +72,7 @@ export default function Form() {
       </div>
     );
   }
+  // Emeil send
 
   return (
     <div className="form-container">
